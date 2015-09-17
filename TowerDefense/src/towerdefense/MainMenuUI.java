@@ -9,7 +9,6 @@ package towerdefense;
  *
  * @author ala5322
  */
-public class GameGUI 
-{
+public interface MainMenuUI {
     
 }
