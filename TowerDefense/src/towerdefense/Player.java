@@ -15,10 +15,10 @@ public class Player {
     private int money;
     private int score;
     
-    
-    void setName(String n)
+    //set the name
+    public void setName(String n)
     {
-        name = n;
+        this.name = n;
     }
 
     /**
@@ -70,5 +70,14 @@ public class Player {
         this.score = score;
     }
     
+    public boolean checkMoney(int playerMoney, int purchasePrice)
+    {
+        if (purchasePrice < playerMoney)
+        {
+            return true;
+        }
+        else
+            return false;
+    }
     
 }
