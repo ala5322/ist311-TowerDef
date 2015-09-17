@@ -73,5 +73,8 @@ public class Weapon
         this.damage = damage;
     }
     
-    
+    public boolean isHit()
+    {
+        //add some code here
+    }
 }
