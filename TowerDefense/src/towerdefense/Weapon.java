@@ -9,6 +9,11 @@ package towerdefense;
  *
  * @author ala5322
  */
+public class Weapon {
+    String name;
+    int cost;
+    int range;
+    int damage;
 public class Weapon 
 {
     int xValue;
