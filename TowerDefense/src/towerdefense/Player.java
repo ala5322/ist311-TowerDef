@@ -10,15 +10,64 @@ package towerdefense;
  * @author ala5322
  */
 public class Player {
-    String name;
-    int health;
-    int money;
-    int score;
+    private String name;
+    private int health;
+    private int money;
+    private int score;
     
     
     void setName(String n)
     {
         name = n;
+    }
+
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @return the health
+     */
+    public int getHealth() {
+        return health;
+    }
+
+    /**
+     * @param health the health to set
+     */
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    /**
+     * @return the money
+     */
+    public int getMoney() {
+        return money;
+    }
+
+    /**
+     * @param money the money to set
+     */
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    /**
+     * @return the score
+     */
+    public int getScore() {
+        return score;
+    }
+
+    /**
+     * @param score the score to set
+     */
+    public void setScore(int score) {
+        this.score = score;
     }
     
     
