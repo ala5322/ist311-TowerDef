@@ -9,6 +9,11 @@ package towerdefense;
  *
  * @author ala5322
  */
-public class Weapon {
+public class Weapon 
+{
+    int xValue;
+    int yValue;
+    int radius;
+    boolean isFiring;
     
 }
