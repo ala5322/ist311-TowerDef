@@ -10,5 +10,16 @@ package towerdefense;
  * @author ala5322
  */
 public class Player {
+    String name;
+    int health;
+    int money;
+    int score;
+    
+    
+    void setName(String n)
+    {
+        name = n;
+    }
+    
     
 }
