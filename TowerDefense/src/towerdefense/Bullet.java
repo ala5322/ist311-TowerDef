@@ -10,5 +10,8 @@ package towerdefense;
  * @author ala5322
  */
 public class Bullet {
-    
+    boolean isFiring;
+    int xValue;
+    int yValue;
+    int radius;
 }
