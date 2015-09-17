@@ -10,5 +10,12 @@ package towerdefense;
  * @author ala5322
  */
 public class Player {
+    int health;
+    int money;
+    int score;
+    
+    
+    
+    
     
 }
