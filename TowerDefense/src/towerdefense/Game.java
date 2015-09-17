@@ -13,4 +13,16 @@ public class Game
 {
     int stage;
     int levelDifficulty;
+    
+    //method to see how much health an enemy has remaining after being hit 
+    public int remainingEnemyHealth(int health, int damage)
+    {
+        //not enough damage to kill enemy
+        if (damage < health)
+            health = health - damage;
+        //more damage than enemy health; enemy dies
+        else
+            health = 0;
+        return health;
+    }
 }
