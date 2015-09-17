@@ -11,5 +11,6 @@ package towerdefense;
  */
 public class Game 
 {
+    int stage;
     
 }
