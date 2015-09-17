@@ -15,6 +15,7 @@ public class Weapon
     private int cost;
     private int range;
     private int damage;
+    
 
     /**
      * @return the name
