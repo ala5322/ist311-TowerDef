@@ -9,16 +9,10 @@ package towerdefense;
  *
  * @author ala5322
  */
-public class Weapon {
+public class Weapon
+{
     String name;
     int cost;
     int range;
     int damage;
-public class Weapon 
-{
-    int xValue;
-    int yValue;
-    int radius;
-    boolean isFiring;
-    
 }
