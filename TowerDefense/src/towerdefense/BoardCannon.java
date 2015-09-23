@@ -11,4 +11,9 @@ package towerdefense;
  */
 public class BoardCannon {
     
+    //constructor for BoardCannon
+    public BoardCannon(int x, int y, int z)
+    {
+        
+    }
 }
