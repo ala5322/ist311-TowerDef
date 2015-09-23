@@ -16,13 +16,16 @@ public class MainMenuGUI
     public void initComponents()
     {
         JFrame mainFrame = new JFrame();
+       
         JPanel mainMenuPanel = new JPanel();
         JPanel namePanel = new JPanel(new BorderLayout());
         JPanel diffPanel = new JPanel(new BorderLayout());
+        JButton startGame = new JButton();
         
         JLabel nameLabel = new JLabel("Please enter your name, son");
         JLabel difficultyLabel = new JLabel("Please select difficulty");
         JTextField nameTextBox = new JTextField("Hugh Jaynus", 15);
+        startGame.setText("Start Game!");
         
         String [] difficulties = new String[3];
         difficulties[0]="Easy-Peasy";
@@ -37,10 +40,12 @@ public class MainMenuGUI
         diffPanel.add(difficultyComboBox, BorderLayout.SOUTH);
         mainMenuPanel.add(namePanel);
         mainMenuPanel.add(diffPanel);
+        mainMenuPanel.add(startGame);
         
         mainFrame.add(mainMenuPanel);
-        mainFrame.setSize(300, 700);
+        mainFrame.setSize(900, 600);
         mainFrame.setVisible(true);
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
        
     }
