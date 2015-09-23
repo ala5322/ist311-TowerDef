@@ -15,6 +15,14 @@ public class Player {
     private int money;
     private int score;
     
+    Player(String n, int h, int m, int s)
+    {
+        name = n;
+        health = h;
+        money = m;
+        score = s;
+    }
+    
     //set the name
     public void setName(String n)
     {
