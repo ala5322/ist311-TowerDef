@@ -5,11 +5,17 @@
  */
 package towerdefense;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author ala5322
  */
 public class GameGUI 
 {
-    
+    private void initComponents()
+    {
+        JFrame fullFrame = new JFrame();
+        
+    }
 }
