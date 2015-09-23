@@ -18,6 +18,13 @@ public class Game
     Enemy[] enemyList = new Enemy[100];
     Weapon[] weaponList = new Weapon[100];
     
+    Game(int s, int ld, String d)
+    {
+        stage = s;
+        levelDifficulty = ld;
+        difficulty = d;
+    }
+    
     public int getStage()
     {
         return stage;
