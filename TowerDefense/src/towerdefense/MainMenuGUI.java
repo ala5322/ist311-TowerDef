@@ -5,6 +5,7 @@
  */
 package towerdefense;
 
+import java.awt.BorderLayout;
 import javax.swing.*;
 /**
  *
@@ -12,14 +13,16 @@ import javax.swing.*;
  */
 public class MainMenuGUI
 {
-    private void initComponents()
+    private static void initComponents()
     {
         JFrame mainFrame = new JFrame();
         JPanel mainMenuPanel = new JPanel();
+        JPanel namePanel = new JPanel(new BorderLayout());
+        JPanel diffPanel = new JPanel(new BorderLayout());
         
         JLabel nameLabel = new JLabel("Please enter your name, son");
         JLabel difficultyLabel = new JLabel("Please select difficulty");
-        JTextField nameTextBox = new JTextField("Hugh Jaynus");
+        JTextField nameTextBox = new JTextField("Hugh Jaynus", 15);
         
         String [] difficulties = new String[3];
         difficulties[0]="Easy-Peasy";
@@ -28,13 +31,20 @@ public class MainMenuGUI
         
         JComboBox difficultyComboBox = new JComboBox(difficulties);
         
-        mainMenuPanel.add(nameLabel);
-        mainMenuPanel.add(nameTextBox);
-        mainMenuPanel.add(difficultyLabel);
-        mainMenuPanel.add(difficultyComboBox);
+        namePanel.add(nameLabel, BorderLayout.PAGE_START);
+        namePanel.add(nameTextBox, BorderLayout.PAGE_END);
+        diffPanel.add(difficultyLabel, BorderLayout.NORTH);
+        diffPanel.add(difficultyComboBox, BorderLayout.SOUTH);
+        mainMenuPanel.add(namePanel);
+        mainMenuPanel.add(diffPanel);
         
         mainFrame.add(mainMenuPanel);
-    
+        mainFrame.setSize(300, 700);
+        mainFrame.setVisible(true);
+        
+       
     }
     
 }
+
+
