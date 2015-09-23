@@ -13,7 +13,7 @@ import javax.swing.*;
  */
 public class MainMenuGUI
 {
-    private static void initComponents()
+    public void initComponents()
     {
         JFrame mainFrame = new JFrame();
         JPanel mainMenuPanel = new JPanel();
