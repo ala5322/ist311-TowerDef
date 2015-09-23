@@ -12,6 +12,7 @@ package towerdefense;
 public class Bullet 
 {
     private boolean isFiring;
+    private boolean isHit;
     private int xValue;
     private int yValue;
     private int radius;
@@ -77,5 +78,25 @@ public class Bullet
      */
     public void setRadius(int radius) {
         this.radius = radius;
+    }
+    public boolean isHit()
+    {
+        //add some code here
+        return true;
+    }
+
+    /**
+     * @return the isHit
+     */
+    public boolean isIsHit() {
+        return isHit;
+    }
+
+    /**
+     * @param isHit the isHit to set
+     */
+    public void setIsHit(boolean isHit) 
+    {
+        this.isHit = isHit;
     }
 }
