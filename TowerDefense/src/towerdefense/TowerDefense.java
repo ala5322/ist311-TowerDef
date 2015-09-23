@@ -22,6 +22,8 @@ public class TowerDefense
     public static void main(String[] args) 
     {
         // TODO code application logic here
+        MainMenuGUI main = new MainMenuGUI();
+        main.initComponents();
     }
     
 }
