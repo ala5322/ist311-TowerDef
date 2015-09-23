@@ -16,6 +16,15 @@ public class Enemy
     private int yValue;
     private int xValue;
     private int health; 
+    
+    Enemy(int s, String c, int x, int y, int h)
+    {
+        speed = s;
+        color = c;
+        xValue = x;
+        yValue = y;
+        health = h;
+    }
 
     /**
      * @return the speed
