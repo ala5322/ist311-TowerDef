@@ -16,6 +16,14 @@ public class Weapon
     private int range;
     private int damage;
     
+    Weapon(String n, int c, int r, int d)
+    {
+        name = n;
+        cost = c;
+        range = r;
+        damage = d;
+    }
+    
 
     /**
      * @return the name
