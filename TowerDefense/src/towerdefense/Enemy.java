@@ -108,7 +108,7 @@ public class Enemy
     }
     public void reachedEnd(int x, int y)
     {
-        if(x >= 10 && y >= 10)
+        if(x >= 525 && y >= 600)
         {
             player.updateHealth(); 
         }
