@@ -16,6 +16,7 @@ public class Enemy
     private int yValue;
     private int xValue;
     private int health; 
+    private Player player;
     
     Enemy(int s, String c, int x, int y, int h)
     {
@@ -95,5 +96,11 @@ public class Enemy
     public void setHealth(int health) {
         this.health = health;
     }
-    
+    public void reachedEnd(int x, int y)
+    {
+        if(x >= 10 && y >= 10)
+        {
+            player.updateHealth(); 
+        }
+    }
 }
