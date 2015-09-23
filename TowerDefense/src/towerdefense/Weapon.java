@@ -76,5 +76,9 @@ public class Weapon
     public boolean isHit()
     {
         //add some code here
+        return true;
     }
+    //is in valid location
+    //isPlaced?
+    //
 }
