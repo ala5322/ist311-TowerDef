@@ -9,7 +9,7 @@ import java.awt.BorderLayout;
 import javax.swing.*;
 /**
  *
- * @author ala5322
+ * @author ala5322 
  */
 public class MainMenuGUI
 {
