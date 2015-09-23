@@ -80,9 +80,7 @@ public class Weapon
     public void setDamage(int damage) {
         this.damage = damage;
     }
-    
-    public boolean isHit()
-    {
-        //add some code here
-    }
+    //is in valid location
+    //isPlaced?
+    //
 }
