@@ -15,6 +15,13 @@ public class Bullet
     private int xValue;
     private int yValue;
     private int radius;
+    
+    Bullet(int x, int y, int r)
+    {
+        xValue = x;
+        yValue = y;
+        radius = r;
+    }
 
     /**
      * @return the isFiring
