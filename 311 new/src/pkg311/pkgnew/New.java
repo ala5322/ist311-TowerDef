@@ -10,6 +10,7 @@ import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import static java.awt.FlowLayout.CENTER;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -20,7 +21,8 @@ import javax.swing.JTextField;
  *
  * @author John
  */
-public class New {
+public class New 
+{
 
     /**
      * @param args the command line arguments
@@ -32,45 +34,30 @@ public class New {
     
     public static void initComponents()
     {
-        JFrame mainFrame = new JFrame();
-        Container contentPane = mainFrame.getContentPane();
-        contentPane.setLayout(new FlowLayout());
-        contentPane.setSize(200, 600);
+        JFrame fullFrame = new JFrame();
+        fullFrame.setSize(900, 600);
         
-        JPanel mainMenuPanel = new JPanel(new FlowLayout());
-        mainMenuPanel.setPreferredSize(new Dimension(200, 600));
-        JPanel namePanel = new JPanel(new BorderLayout());
-        JPanel diffPanel = new JPanel(new BorderLayout());
-        JPanel setupPanel = new JPanel(new BorderLayout());
-        JButton startGameButton = new JButton();
+        Container contentPane = fullFrame.getContentPane();
         
-        JLabel nameLabel = new JLabel("Please enter your name, son");
-        JLabel difficultyLabel = new JLabel("Please select difficulty");
-        JTextField nameTextBox = new JTextField("Hugh Jaynus", 15);
-        startGameButton.setText("Start Game!");
-        startGameButton.setSize(100, 20);
+        contentPane.setLayout(new BorderLayout());
+        contentPane.setSize(900, 600);
         
-        String [] difficulties = new String[3];
-        difficulties[0]="Easy-Peasy";
-        difficulties[1]="Middle-of-the-Road";
-        difficulties[2]="Hard-as-F***";
+        JPanel gamePanel = new JPanel(new FlowLayout());
+        JPanel controlPanel = new JPanel(new FlowLayout());
+        gamePanel.setSize(600, 600);
+        controlPanel.setSize(300, 600);
         
-        JComboBox difficultyComboBox = new JComboBox(difficulties);
+        JLabel test1 = new JLabel("here is the game board");
+        JLabel test2 = new JLabel("here is the control panel");
         
-        namePanel.add(nameLabel, BorderLayout.NORTH);
-        namePanel.add(nameTextBox, BorderLayout.SOUTH);
-        diffPanel.add(difficultyLabel, BorderLayout.NORTH);
-        diffPanel.add(difficultyComboBox, BorderLayout.SOUTH);
-        setupPanel.add(namePanel, BorderLayout.NORTH);
-        setupPanel.add(diffPanel, BorderLayout.SOUTH);
-        mainMenuPanel.add(setupPanel);
-        mainMenuPanel.add(startGameButton);
-        mainMenuPanel.setSize(200, 600);
-        contentPane.add(mainMenuPanel);
+        gamePanel.add(test1);
+        controlPanel.add(test2);
+               
+        contentPane.add(gamePanel, BorderLayout.WEST);
+        contentPane.add(controlPanel,BorderLayout.EAST);
         
-        mainFrame.setSize(900, 600);
-        mainFrame.setVisible(true);
-        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        fullFrame.setVisible(true);
+        fullFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
     }
 }
