@@ -76,7 +76,8 @@ public class Bullet
     /**
      * @param radius the radius to set
      */
-    public void setRadius(int radius) {
+    public void setRadius(int radius) 
+    {
         this.radius = radius;
     }
     public boolean isHit()
