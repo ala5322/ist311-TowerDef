@@ -3,29 +3,52 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package towerdefense;
+package pkg311.pkgnew;
 
-import java.awt.BorderLayout;
 import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
 /**
  *
- * @author ala5322 
+ * @author John
  */
-public class MainMenuGUI
-{
-    public void initComponents()
+public class MainMenuGUI {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        initComponents();
+    }
+    
+    public static void initComponents()
     {
         JFrame mainFrame = new JFrame();
-       
-        JPanel mainMenuPanel = new JPanel();
+        Container contentPane = mainFrame.getContentPane();
+        contentPane.setLayout(new FlowLayout());
+        contentPane.setSize(200, 600);
+        
+        JPanel mainMenuPanel = new JPanel(new FlowLayout());
+        mainMenuPanel.setPreferredSize(new Dimension(200, 600));
         JPanel namePanel = new JPanel(new BorderLayout());
         JPanel diffPanel = new JPanel(new BorderLayout());
-        JButton startGame = new JButton();
+        JPanel setupPanel = new JPanel(new BorderLayout());
+        JButton startGameButton = new JButton();
         
         JLabel nameLabel = new JLabel("Please enter your name, son");
         JLabel difficultyLabel = new JLabel("Please select difficulty");
         JTextField nameTextBox = new JTextField("Hugh Jaynus", 15);
-        startGame.setText("Start Game!");
+        startGameButton.setText("Start Game!");
+        startGameButton.setSize(100, 20);
         
         String [] difficulties = new String[3];
         difficulties[0]="Easy-Peasy";
@@ -34,22 +57,20 @@ public class MainMenuGUI
         
         JComboBox difficultyComboBox = new JComboBox(difficulties);
         
-        namePanel.add(nameLabel, BorderLayout.PAGE_START);
-        namePanel.add(nameTextBox, BorderLayout.PAGE_END);
+        namePanel.add(nameLabel, BorderLayout.NORTH);
+        namePanel.add(nameTextBox, BorderLayout.SOUTH);
         diffPanel.add(difficultyLabel, BorderLayout.NORTH);
         diffPanel.add(difficultyComboBox, BorderLayout.SOUTH);
-        mainMenuPanel.add(namePanel);
-        mainMenuPanel.add(diffPanel);
-        mainMenuPanel.add(startGame);
+        setupPanel.add(namePanel, BorderLayout.NORTH);
+        setupPanel.add(diffPanel, BorderLayout.SOUTH);
+        mainMenuPanel.add(setupPanel);
+        mainMenuPanel.add(startGameButton);
+        mainMenuPanel.setSize(200, 600);
+        contentPane.add(mainMenuPanel);
         
-        mainFrame.add(mainMenuPanel);
         mainFrame.setSize(900, 600);
         mainFrame.setVisible(true);
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-       
     }
-    
 }
-
-
