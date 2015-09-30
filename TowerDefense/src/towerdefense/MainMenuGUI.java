@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkg311.pkgnew;
+//package pkg311.pkgnew;
 
 import javax.swing.*;
 import java.awt.BorderLayout;
@@ -25,10 +25,6 @@ public class MainMenuGUI {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        initComponents();
-    }
     
     public static void initComponents()
     {
