@@ -47,5 +47,7 @@ public class GameGUI
         fullFrame.setVisible(true);
         fullFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
+        //not finished yet
+        
     }
 }
