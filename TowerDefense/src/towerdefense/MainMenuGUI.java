@@ -10,6 +10,8 @@ import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -22,6 +24,10 @@ import javax.swing.JTextField;
  */
 public class MainMenuGUI 
 {
+    public MainMenuGUI()
+    {
+        
+    }
     
     public static void initComponents()
     {
@@ -42,6 +48,23 @@ public class MainMenuGUI
         JTextField nameTextBox = new JTextField("Hugh Jaynus", 15);
         startGameButton.setText("Start Game!");
         startGameButton.setSize(100, 20);
+        
+        startGameButton.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                if (nameTextBox.getText().length() < 3 || nameTextBox.getText().length() > 10)
+                {
+                    //ERROR
+                }
+                else 
+                {
+                    //CALL GAME GUI
+                    GameGUI theGameGUI = new GameGUI();
+                    theGameGUI.initComponents()
+                }
+            }
+        });
         
         String [] difficulties = new String[3];
         difficulties[0]="Easy-Peasy";
@@ -64,6 +87,6 @@ public class MainMenuGUI
         mainFrame.setSize(900, 600);
         mainFrame.setVisible(true);
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
     }
+    
 }

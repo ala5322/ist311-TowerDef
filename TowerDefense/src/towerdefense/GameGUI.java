@@ -22,6 +22,10 @@ import javax.swing.*;
  */
 public class GameGUI 
 {
+    public GameGUI()
+    {
+        
+    }
     public void initComponents()
     {
         final int WIDTH_ONE = 900;
