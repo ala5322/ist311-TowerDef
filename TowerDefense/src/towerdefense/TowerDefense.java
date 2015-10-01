@@ -19,8 +19,6 @@ public class TowerDefense
         // TODO code application logic here
        MainMenuGUI theMainGUI = new MainMenuGUI();
        theMainGUI.initComponents();
-       GameGUI game = new GameGUI();
-       game.initComponents();
     }
     
 }
