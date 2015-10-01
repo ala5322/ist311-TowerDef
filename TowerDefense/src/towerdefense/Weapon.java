@@ -28,56 +28,65 @@ public class Weapon
     /**
      * @return the name
      */
-    public String getName() {
+    public String getName() 
+    {
         return name;
     }
 
     /**
      * @param name the name to set
      */
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
     /**
      * @return the cost
      */
-    public int getCost() {
+    public int getCost() 
+    {
+        
         return cost;
     }
 
     /**
      * @param cost the cost to set
      */
-    public void setCost(int cost) {
+    public void setCost(int cost) 
+    {
         this.cost = cost;
     }
 
     /**
      * @return the range
      */
-    public int getRange() {
+    public int getRange() 
+    {
         return range;
     }
 
     /**
      * @param range the range to set
      */
-    public void setRange(int range) {
+    public void setRange(int range) 
+    {
         this.range = range;
     }
 
     /**
      * @return the damage
      */
-    public int getDamage() {
+    public int getDamage() 
+    {
         return damage;
     }
 
     /**
      * @param damage the damage to set
      */
-    public void setDamage(int damage) {
+    public void setDamage(int damage) 
+    {
         this.damage = damage;
     }
     //is in valid location

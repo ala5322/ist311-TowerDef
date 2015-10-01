@@ -61,9 +61,22 @@ public class GameGUI
         scorePanel.setBackground(Color.gray);
         scorePanel.add(scoreLabel, BorderLayout.NORTH);
         scorePanel.add(scoreField, BorderLayout.SOUTH);
+        //next wave button
+        JButton nextWaveButton = new JButton("Next Wave");
+        JButton restartButton = new JButton("Restart Game");
+        restartButton.setVisible(false);
+        
+        //weapon buttons
+        ImageIcon eraser = new ImageIcon("eraser.jpg");
+        JButton eraserButton = new JButton();
+        JButton paperFBButtong = new JButton();
+        JButton homeworButton = new JButton();
         
         controlPanel.add(moneyPanel);
         controlPanel.add(scorePanel);
+        controlPanel.add(nextWaveButton);
+        controlPanel.add(restartButton);
+        
         
         //add the game and control panels to the content pane     
         contentPane.add(gamePanel, BorderLayout.WEST);
