@@ -55,7 +55,7 @@ public class MainMenuGUI
             {
                 if (nameTextBox.getText().length() < 3 || nameTextBox.getText().length() > 10)
                 {
-                    //ERROR
+                    //ERROR 
                 }
                 else 
                 {
