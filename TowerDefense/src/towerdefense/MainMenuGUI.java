@@ -55,7 +55,8 @@ public class MainMenuGUI
             {
                 if (nameTextBox.getText().length() < 3 || nameTextBox.getText().length() > 10)
                 {
-                    //ERROR 
+                    JFrame parent = new JFrame();
+                    JOptionPane.showMessageDialog(parent, "Please enter a user name that is more than 3 or less than 10 characters!");
                 }
                 else 
                 {
