@@ -20,11 +20,8 @@ import javax.swing.JTextField;
  *
  * @author John
  */
-public class MainMenuGUI {
-
-    /**
-     * @param args the command line arguments
-     */
+public class MainMenuGUI 
+{
     
     public static void initComponents()
     {
