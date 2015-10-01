@@ -29,7 +29,7 @@ public class MainMenuGUI
         
     }
     
-    public static void initComponents()
+    public void initComponents()
     {
         JFrame mainFrame = new JFrame();
         Container contentPane = mainFrame.getContentPane();
@@ -45,7 +45,7 @@ public class MainMenuGUI
         
         JLabel nameLabel = new JLabel("Please enter your name, son");
         JLabel difficultyLabel = new JLabel("Please select difficulty");
-        JTextField nameTextBox = new JTextField("Hugh Jaynus", 15);
+        JTextField nameTextBox = new JTextField("HughJaynus", 15);
         startGameButton.setText("Start Game!");
         startGameButton.setSize(100, 20);
         
@@ -61,7 +61,8 @@ public class MainMenuGUI
                 {
                     //CALL GAME GUI
                     GameGUI theGameGUI = new GameGUI();
-                    theGameGUI.initComponents()
+                    theGameGUI.initComponents();
+                    mainFrame.dispose();
                 }
             }
         });
