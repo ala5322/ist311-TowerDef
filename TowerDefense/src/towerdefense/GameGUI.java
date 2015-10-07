@@ -219,7 +219,7 @@ public class GameGUI
         //create the control and game panels. Set size and color as well.
         JPanel gamePanel = new JPanel(new FlowLayout());
         gamePanel.setPreferredSize(new Dimension(HEIGHT, HEIGHT));
-        JPanel controlPanel = new JPanel(new FlowLayout());
+        JPanel controlPanel = new JPanel(new BorderLayout());
         controlPanel.setPreferredSize(new Dimension(WIDTH_TWO, HEIGHT));
         controlPanel.setBackground(Color.gray);
         gamePanel.setBackground(Color.blue);
@@ -255,25 +255,48 @@ public class GameGUI
         JLabel scoreLabel = new JLabel("Score: ");
         
         JPanel moneyPanel = new JPanel(new BorderLayout());
+        moneyPanel.setPreferredSize(new Dimension(150, 50));
+        moneyPanel.setBorder(BorderFactory.createRaisedBevelBorder());
         moneyPanel.setBackground(Color.gray);
         moneyPanel.add(moneyLabel, BorderLayout.NORTH);
         moneyPanel.add(moneyField, BorderLayout.SOUTH);
         
         JPanel scorePanel = new JPanel(new BorderLayout());
+        scorePanel.setPreferredSize(new Dimension(150, 50));
+        scorePanel.setBorder(BorderFactory.createRaisedBevelBorder());
         scorePanel.setBackground(Color.gray);
         scorePanel.add(scoreLabel, BorderLayout.NORTH);
         scorePanel.add(scoreField, BorderLayout.SOUTH);
         
+        JPanel moneyScorePanel = new JPanel(new BorderLayout());
+        scorePanel.setBackground(Color.gray);
+        moneyScorePanel.add(moneyPanel, BorderLayout.WEST);
+        moneyScorePanel.add(scorePanel, BorderLayout.EAST);
+        
         //next wave button
         JButton nextWaveButton = new JButton("Next Wave");
+        nextWaveButton.setPreferredSize(new Dimension(150, 50));
         JButton restartButton = new JButton("Restart Game");
-        restartButton.setVisible(false);
+        restartButton.setPreferredSize(new Dimension(150, 50));
+        restartButton.setVisible(true);
+        nextWaveButton.setVisible(true);
+                
+        JPanel wavePanel = new JPanel(new BorderLayout());
+        wavePanel.setPreferredSize(new Dimension(300, 50));
+        wavePanel.add(nextWaveButton, BorderLayout.WEST);
+        wavePanel.add(restartButton, BorderLayout.EAST);
         
         //weapon buttons
         ImageIcon eraser = new ImageIcon("eraser.jpg");
-        JButton eraserButton = new JButton("weap1");
+        
+        
+        JButton eraserButton = new JButton(eraser);
+        eraserButton.setPreferredSize(new Dimension(50, 50));
+        eraserButton.setVisible(true);
         JButton paperFBButton = new JButton("weap2");
+        eraserButton.setSize(new Dimension(50, 50));
         JButton homeworkButton = new JButton("weap3");
+        eraserButton.setSize(new Dimension(50, 50));
         
         eraserButton.addActionListener(new ActionListener()
         {
@@ -305,24 +328,45 @@ public class GameGUI
             }
         });
         
-        JPanel weaponPanel = new JPanel(new BorderLayout());
-        weaponPanel.add(eraserButton, BorderLayout.NORTH);
-        weaponPanel.add(paperFBButton, BorderLayout.CENTER);
-        weaponPanel.add(homeworkButton, BorderLayout.SOUTH);
+        JLabel eraserLabel = new JLabel("Eraser Cannon $20. Small Range Large Damage");
+        JLabel homeworkLabel = new JLabel("Homework Tosser $15. Medium Range Medium Damage");
+        JLabel paperFBLabel = new JLabel("Paper Football Launcher $10. Long Range Small Damage");
         
+        JPanel weaponButtonPanel = new JPanel(new FlowLayout());
+        weaponButtonPanel.setPreferredSize(new Dimension(150, 300));
+        JPanel weaponLabelPanel = new JPanel();
+        
+        weaponButtonPanel.add(eraserButton);
+        weaponButtonPanel.add(paperFBButton);
+        weaponButtonPanel.add(homeworkButton);
+        
+        weaponLabelPanel.add(eraserLabel);
+        weaponLabelPanel.add(homeworkLabel);
+        weaponLabelPanel.add(paperFBLabel);
+        
+        JPanel weaponPanel = new JPanel(new BorderLayout());
+        weaponPanel.add(weaponButtonPanel, BorderLayout.WEST);
+        weaponPanel.add(weaponLabelPanel, BorderLayout.EAST);
+        
+        JPanel healthPanel = new JPanel();
+        
+        JPanel topHalfPanel = new JPanel(new BorderLayout());
+        JPanel botHalfPanel = new JPanel(new BorderLayout());
         
         //weapon labels
-        JLabel eraserLabel = new JLabel("Eraser Cannon $20");
-        JLabel eraserDetailsLabel = new JLabel("Small Range Large Damage");
-        JLabel homeworkLabel = new JLabel("Homework Tosser $15");
-        JLabel homeworkDetailsLabel = new JLabel("Medium Range Medium Damage");
-        JLabel paperFBLabel = new JLabel("Paper Football Launcher $10");
-        JLabel paperFBDetailsLabel = new JLabel("Long Range Small Damage");
         
         
-        controlPanel.add(moneyPanel);
-        controlPanel.add(scorePanel);
-        controlPanel.add(nextWaveButton);
+        topHalfPanel.add(moneyScorePanel, BorderLayout.NORTH);
+        topHalfPanel.add(wavePanel, BorderLayout.SOUTH);
+        
+        botHalfPanel.add(healthPanel, BorderLayout.NORTH);
+        botHalfPanel.add(weaponPanel, BorderLayout.SOUTH);
+        
+        
+        
+        controlPanel.add(topHalfPanel, BorderLayout.NORTH);
+        controlPanel.add(botHalfPanel, BorderLayout.SOUTH);
+        /*
         controlPanel.add(eraserLabel);
         controlPanel.add(eraserButton);
         controlPanel.add(eraserDetailsLabel);
@@ -335,7 +379,7 @@ public class GameGUI
         controlPanel.add(restartButton);
         controlPanel.add(weaponPanel, BorderLayout.LINE_START);
         
-        
+        */
         //add the game and control panels to the content pane     
         contentPane.add(gamePanel, BorderLayout.WEST);
         contentPane.add(controlPanel,BorderLayout.EAST);
