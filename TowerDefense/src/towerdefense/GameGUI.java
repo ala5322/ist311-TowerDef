@@ -269,12 +269,30 @@ public class GameGUI
         //weapon buttons
         ImageIcon eraser = new ImageIcon("eraser.jpg");
         JButton eraserButton = new JButton();
-        JButton paperFBButtong = new JButton();
-        JButton homeworButton = new JButton();
+        JButton paperFBButton = new JButton();
+        JButton homeworkButton = new JButton();
+        
+        //weapon labels
+        JLabel eraserLabel = new JLabel("Eraser Cannon $20");
+        JLabel eraserDetailsLabel = new JLabel("Small Range Large Damage");
+        JLabel homeworkLabel = new JLabel("Homework Tosser $15");
+        JLabel homeworkDetailsLabel = new JLabel("Medium Range Medium Damage");
+        JLabel paperFBLabel = new JLabel("Paper Football Launcher $10");
+        JLabel paperFBDetailsLabel = new JLabel("Long Range Small Damage");
+        
         
         controlPanel.add(moneyPanel);
         controlPanel.add(scorePanel);
         controlPanel.add(nextWaveButton);
+        controlPanel.add(eraserLabel);
+        controlPanel.add(eraserButton);
+        controlPanel.add(eraserDetailsLabel);
+        controlPanel.add(paperFBLabel);
+        controlPanel.add(paperFBButton);
+        controlPanel.add(paperFBDetailsLabel);
+        controlPanel.add(homeworkLabel);
+        controlPanel.add(homeworkButton);
+        controlPanel.add(homeworkDetailsLabel);
         controlPanel.add(restartButton);
         
         
