@@ -309,9 +309,7 @@ public class GameGUI
         weaponPanel.add(eraserButton, BorderLayout.NORTH);
         weaponPanel.add(paperFBButton, BorderLayout.CENTER);
         weaponPanel.add(homeworkButton, BorderLayout.SOUTH);
-        JButton eraserButton = new JButton();
-        JButton paperFBButton = new JButton();
-        JButton homeworkButton = new JButton();
+        
         
         //weapon labels
         JLabel eraserLabel = new JLabel("Eraser Cannon $20");
