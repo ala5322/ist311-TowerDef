@@ -11,6 +11,7 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -271,7 +272,9 @@ public class GameGUI
         
         //weapon buttons
         ImageIcon eraser = new ImageIcon("eraser.jpg");
-        JButton eraserButton = new JButton("weap1");
+        JButton eraserButton = new JButton(eraser); 
+        //eraserButton.setIcon(eraser);
+        
         JButton paperFBButton = new JButton("weap2");
         JButton homeworkButton = new JButton("weap3");
         
