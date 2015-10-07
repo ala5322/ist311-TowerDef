@@ -11,6 +11,8 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -261,6 +263,7 @@ public class GameGUI
         scorePanel.setBackground(Color.gray);
         scorePanel.add(scoreLabel, BorderLayout.NORTH);
         scorePanel.add(scoreField, BorderLayout.SOUTH);
+        
         //next wave button
         JButton nextWaveButton = new JButton("Next Wave");
         JButton restartButton = new JButton("Restart Game");
@@ -268,6 +271,44 @@ public class GameGUI
         
         //weapon buttons
         ImageIcon eraser = new ImageIcon("eraser.jpg");
+        JButton eraserButton = new JButton("weap1");
+        JButton paperFBButton = new JButton("weap2");
+        JButton homeworkButton = new JButton("weap3");
+        
+        eraserButton.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                // primes the eraser to be placed. Selects it? like witha borderaround it maybe
+                JFrame parent = new JFrame();
+                JOptionPane.showMessageDialog(parent, "selects eraser i guess.");
+            }
+        });
+        
+        paperFBButton.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                // primes the paper fb to be placed. Selects it? like witha borderaround it maybe
+                JFrame parent = new JFrame();
+                JOptionPane.showMessageDialog(parent, "selects paper fb i guess.");
+            }
+        });
+        
+        homeworkButton.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                // primes the homework to be placed. Selects it? like witha borderaround it maybe
+                JFrame parent = new JFrame();
+                JOptionPane.showMessageDialog(parent, "selects homework i guess.");
+            }
+        });
+        
+        JPanel weaponPanel = new JPanel(new BorderLayout());
+        weaponPanel.add(eraserButton, BorderLayout.NORTH);
+        weaponPanel.add(paperFBButton, BorderLayout.CENTER);
+        weaponPanel.add(homeworkButton, BorderLayout.SOUTH);
         JButton eraserButton = new JButton();
         JButton paperFBButton = new JButton();
         JButton homeworkButton = new JButton();
@@ -294,6 +335,7 @@ public class GameGUI
         controlPanel.add(homeworkButton);
         controlPanel.add(homeworkDetailsLabel);
         controlPanel.add(restartButton);
+        controlPanel.add(weaponPanel, BorderLayout.LINE_START);
         
         
         //add the game and control panels to the content pane     
