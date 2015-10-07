@@ -288,15 +288,18 @@ public class GameGUI
         
         //weapon buttons
         ImageIcon eraser = new ImageIcon("eraser.jpg");
-        
+        ImageIcon football = new ImageIcon("paperFootball.png");
+        ImageIcon book = new ImageIcon("book.png");
         
         JButton eraserButton = new JButton(eraser);
         eraserButton.setPreferredSize(new Dimension(50, 50));
         eraserButton.setVisible(true);
-        JButton paperFBButton = new JButton("weap2");
-        eraserButton.setSize(new Dimension(50, 50));
-        JButton homeworkButton = new JButton("weap3");
-        eraserButton.setSize(new Dimension(50, 50));
+        JButton paperFBButton = new JButton(football);
+        paperFBButton.setPreferredSize(new Dimension(50, 50));
+        paperFBButton.setVisible(true);
+        JButton homeworkButton = new JButton(book);
+        homeworkButton.setPreferredSize(new Dimension(50, 50));
+        homeworkButton.setVisible(true);
         
         eraserButton.addActionListener(new ActionListener()
         {
@@ -328,21 +331,32 @@ public class GameGUI
             }
         });
         
-        JLabel eraserLabel = new JLabel("Eraser Cannon $20. Small Range Large Damage");
-        JLabel homeworkLabel = new JLabel("Homework Tosser $15. Medium Range Medium Damage");
-        JLabel paperFBLabel = new JLabel("Paper Football Launcher $10. Long Range Small Damage");
+        JLabel eraserLabel1 = new JLabel("Eraser Cannon $20.");
+        JLabel eraserLabel2 = new JLabel("Small Range Large Damage");
+        JLabel eraserLabel3 = new JLabel("                                       ");
+        JLabel homeworkLabel1 = new JLabel("Homework Tosser $15.");
+        JLabel homeworkLabel2 = new JLabel("Medium Range Medium Damage");
+        JLabel homeworkLabel3 = new JLabel("                                       ");
+        JLabel paperFBLabel1 = new JLabel("Paper Football Launcher $10.");
+        JLabel paperFBLabel2 = new JLabel("Long Range Small Damage");
         
         JPanel weaponButtonPanel = new JPanel(new FlowLayout());
-        weaponButtonPanel.setPreferredSize(new Dimension(150, 300));
-        JPanel weaponLabelPanel = new JPanel();
+        weaponButtonPanel.setPreferredSize(new Dimension(75, 300));
+        JPanel weaponLabelPanel = new JPanel(new FlowLayout());
+        weaponLabelPanel.setPreferredSize(new Dimension(225, 300));
         
         weaponButtonPanel.add(eraserButton);
         weaponButtonPanel.add(paperFBButton);
         weaponButtonPanel.add(homeworkButton);
         
-        weaponLabelPanel.add(eraserLabel);
-        weaponLabelPanel.add(homeworkLabel);
-        weaponLabelPanel.add(paperFBLabel);
+        weaponLabelPanel.add(eraserLabel1);
+        weaponLabelPanel.add(eraserLabel2);
+        weaponLabelPanel.add(eraserLabel3);
+        weaponLabelPanel.add(homeworkLabel1);
+        weaponLabelPanel.add(homeworkLabel2);
+        weaponLabelPanel.add(homeworkLabel3);
+        weaponLabelPanel.add(paperFBLabel1);
+        weaponLabelPanel.add(paperFBLabel2);
         
         JPanel weaponPanel = new JPanel(new BorderLayout());
         weaponPanel.add(weaponButtonPanel, BorderLayout.WEST);
