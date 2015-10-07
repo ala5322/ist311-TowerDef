@@ -273,7 +273,6 @@ public class GameGUI
         //weapon buttons
         ImageIcon eraser = new ImageIcon("eraser.jpg");
         JButton eraserButton = new JButton(eraser); 
-        //eraserButton.setIcon(eraser);
         
         JButton paperFBButton = new JButton("weap2");
         JButton homeworkButton = new JButton("weap3");
