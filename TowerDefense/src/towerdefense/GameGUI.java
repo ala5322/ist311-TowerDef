@@ -286,6 +286,12 @@ public class GameGUI
         wavePanel.add(nextWaveButton, BorderLayout.WEST);
         wavePanel.add(restartButton, BorderLayout.EAST);
         
+        JButton healthModule = new JButton("HEALTH SHIT");
+        
+        JPanel healthPanel = new JPanel(new FlowLayout());
+        healthPanel.setPreferredSize(new Dimension(300, 200));
+        healthPanel.add(healthModule);
+        
         //weapon buttons
         ImageIcon eraser = new ImageIcon("eraser.jpg");
         ImageIcon football = new ImageIcon("paperFootball.png");
@@ -308,6 +314,7 @@ public class GameGUI
                 // primes the eraser to be placed. Selects it? like witha borderaround it maybe
                 JFrame parent = new JFrame();
                 JOptionPane.showMessageDialog(parent, "selects eraser i guess.");
+                EraserCannon.createWeapon();
             }
         });
         
@@ -318,6 +325,7 @@ public class GameGUI
                 // primes the paper fb to be placed. Selects it? like witha borderaround it maybe
                 JFrame parent = new JFrame();
                 JOptionPane.showMessageDialog(parent, "selects paper fb i guess.");
+                FootballLauncher.createWeapon();
             }
         });
         
@@ -328,6 +336,7 @@ public class GameGUI
                 // primes the homework to be placed. Selects it? like witha borderaround it maybe
                 JFrame parent = new JFrame();
                 JOptionPane.showMessageDialog(parent, "selects homework i guess.");
+                HomeworkTosser.createWeapon();
             }
         });
         
@@ -339,7 +348,6 @@ public class GameGUI
         JLabel paperFBLabel3 = new JLabel("                                       ");
         JLabel homeworkLabel1 = new JLabel("Homework Tosser $15.");
         JLabel homeworkLabel2 = new JLabel("Medium Range Medium Damage");
-        
         
         JPanel weaponButtonPanel = new JPanel(new FlowLayout());
         weaponButtonPanel.setPreferredSize(new Dimension(75, 300));
@@ -362,39 +370,22 @@ public class GameGUI
         JPanel weaponPanel = new JPanel(new BorderLayout());
         weaponPanel.add(weaponButtonPanel, BorderLayout.WEST);
         weaponPanel.add(weaponLabelPanel, BorderLayout.EAST);
-        
-        JPanel healthPanel = new JPanel();
-        
+       
         JPanel topHalfPanel = new JPanel(new BorderLayout());
+        topHalfPanel.setPreferredSize(new Dimension(300, 100));
         JPanel botHalfPanel = new JPanel(new BorderLayout());
+        botHalfPanel.setPreferredSize(new Dimension(300, 500));
         
         //weapon labels
-        
-        
         topHalfPanel.add(moneyScorePanel, BorderLayout.NORTH);
         topHalfPanel.add(wavePanel, BorderLayout.SOUTH);
         
         botHalfPanel.add(healthPanel, BorderLayout.NORTH);
         botHalfPanel.add(weaponPanel, BorderLayout.SOUTH);
         
-        
-        
         controlPanel.add(topHalfPanel, BorderLayout.NORTH);
         controlPanel.add(botHalfPanel, BorderLayout.SOUTH);
-        /*
-        controlPanel.add(eraserLabel);
-        controlPanel.add(eraserButton);
-        controlPanel.add(eraserDetailsLabel);
-        controlPanel.add(paperFBLabel);
-        controlPanel.add(paperFBButton);
-        controlPanel.add(paperFBDetailsLabel);
-        controlPanel.add(homeworkLabel);
-        controlPanel.add(homeworkButton);
-        controlPanel.add(homeworkDetailsLabel);
-        controlPanel.add(restartButton);
-        controlPanel.add(weaponPanel, BorderLayout.LINE_START);
         
-        */
         //add the game and control panels to the content pane     
         contentPane.add(gamePanel, BorderLayout.WEST);
         contentPane.add(controlPanel,BorderLayout.EAST);
