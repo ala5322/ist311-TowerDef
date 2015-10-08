@@ -9,7 +9,15 @@ package towerdefense;
  *
  * @author ala5322
  */
-public class EraserCannon{
-    
-    
+public class EraserCannon extends Weapon
+{
+    public EraserCannon(String n, int c, int r, int d) 
+    {
+        super(n, c, r, d);
+        
+    }
+    static void createWeapon()
+    {
+        
+    }
 }
