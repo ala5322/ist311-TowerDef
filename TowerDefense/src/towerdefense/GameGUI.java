@@ -334,11 +334,12 @@ public class GameGUI
         JLabel eraserLabel1 = new JLabel("Eraser Cannon $20.");
         JLabel eraserLabel2 = new JLabel("Small Range Large Damage");
         JLabel eraserLabel3 = new JLabel("                                       ");
-        JLabel homeworkLabel1 = new JLabel("Homework Tosser $15.");
-        JLabel homeworkLabel2 = new JLabel("Medium Range Medium Damage");
-        JLabel homeworkLabel3 = new JLabel("                                       ");
         JLabel paperFBLabel1 = new JLabel("Paper Football Launcher $10.");
         JLabel paperFBLabel2 = new JLabel("Long Range Small Damage");
+        JLabel paperFBLabel3 = new JLabel("                                       ");
+        JLabel homeworkLabel1 = new JLabel("Homework Tosser $15.");
+        JLabel homeworkLabel2 = new JLabel("Medium Range Medium Damage");
+        
         
         JPanel weaponButtonPanel = new JPanel(new FlowLayout());
         weaponButtonPanel.setPreferredSize(new Dimension(75, 300));
@@ -352,11 +353,11 @@ public class GameGUI
         weaponLabelPanel.add(eraserLabel1);
         weaponLabelPanel.add(eraserLabel2);
         weaponLabelPanel.add(eraserLabel3);
-        weaponLabelPanel.add(homeworkLabel1);
-        weaponLabelPanel.add(homeworkLabel2);
-        weaponLabelPanel.add(homeworkLabel3);
         weaponLabelPanel.add(paperFBLabel1);
         weaponLabelPanel.add(paperFBLabel2);
+        weaponLabelPanel.add(paperFBLabel3);
+        weaponLabelPanel.add(homeworkLabel1);
+        weaponLabelPanel.add(homeworkLabel2);
         
         JPanel weaponPanel = new JPanel(new BorderLayout());
         weaponPanel.add(weaponButtonPanel, BorderLayout.WEST);
