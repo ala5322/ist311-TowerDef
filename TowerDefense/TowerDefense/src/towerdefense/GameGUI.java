@@ -74,6 +74,7 @@ public class GameGUI
         controlPanel.add(scorePanel);
         controlPanel.add(eraserButton);
         
+        
         //add the game and control panels to the content pane     
         contentPane.add(gamePanel, BorderLayout.WEST);
         contentPane.add(controlPanel,BorderLayout.EAST);

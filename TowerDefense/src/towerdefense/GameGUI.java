@@ -11,6 +11,7 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -23,11 +24,13 @@ import javax.swing.*;
  *
  * @author ala5322
  */
+//comment
+//comment
 public class GameGUI 
 {
     public GameGUI()
     {
-        
+        initComponents();
     }
     public void initComponents()
     {
@@ -37,7 +40,7 @@ public class GameGUI
         JButton b1 = new JButton();
         JButton b2 = new JButton();
         JButton b3 = new JButton();
-        b3.setBackground(Color.red);
+        b3.setVisible(false);
         JButton b4 = new JButton();
         JButton b5 = new JButton();
         JButton b6 = new JButton();
@@ -50,7 +53,7 @@ public class GameGUI
         JButton b13 = new JButton();
         JButton b14 = new JButton();
         JButton b15 = new JButton();
-        b15.setBackground(Color.red);
+        b15.setVisible(false);
         JButton b16 = new JButton();
         JButton b17 = new JButton();
         JButton b18 = new JButton();
@@ -63,7 +66,7 @@ public class GameGUI
         JButton b25 = new JButton();
         JButton b26 = new JButton();
         JButton b27 = new JButton();
-        b27.setBackground(Color.red);
+        b27.setVisible(false);
         JButton b28 = new JButton();
         JButton b29 = new JButton();
         JButton b30 = new JButton();
@@ -76,83 +79,83 @@ public class GameGUI
         JButton b37 = new JButton();
         JButton b38 = new JButton();
         JButton b39 = new JButton();
-        b39.setBackground(Color.red);
+        b39.setVisible(false);
         JButton b40 = new JButton();
         JButton b41 = new JButton();
         JButton b42 = new JButton();
         JButton b43 = new JButton();
-        b43.setBackground(Color.red);
+        b43.setVisible(false);
         JButton b44 = new JButton();
-        b44.setBackground(Color.red);
+        b44.setVisible(false);
         JButton b45 = new JButton();
-        b45.setBackground(Color.red);
+        b45.setVisible(false);
         JButton b46 = new JButton();
-        b46.setBackground(Color.red);
+        b46.setVisible(false);
         JButton b47 = new JButton();
-        b47.setBackground(Color.red);
+        b47.setVisible(false);
         JButton b48 = new JButton();
         JButton b49 = new JButton();
         JButton b50 = new JButton();
         JButton b51 = new JButton();
-        b51.setBackground(Color.red);
+        b51.setVisible(false);
         JButton b52 = new JButton();
         JButton b53 = new JButton();
         JButton b54 = new JButton();
         JButton b55 = new JButton();
-        b55.setBackground(Color.red);
+        b55.setVisible(false);
         JButton b56 = new JButton();
         JButton b57 = new JButton();
         JButton b58 = new JButton();
         JButton b59 = new JButton();
-        b59.setBackground(Color.red);
+        b59.setVisible(false);
         JButton b60 = new JButton();
         JButton b61 = new JButton();
         JButton b62 = new JButton();
         JButton b63 = new JButton();
-        b63.setBackground(Color.red);
+        b63.setVisible(false);
         JButton b64 = new JButton();
         JButton b65 = new JButton();
         JButton b66 = new JButton();
         JButton b67 = new JButton();
-        b67.setBackground(Color.red);
+        b67.setVisible(false);
         JButton b68 = new JButton();
         JButton b69 = new JButton();
         JButton b70 = new JButton();
         JButton b71 = new JButton();
-        b71.setBackground(Color.red);
+        b71.setVisible(false);
         JButton b72 = new JButton();
         JButton b73 = new JButton();
         JButton b74 = new JButton();
         JButton b75 = new JButton();
-        b75.setBackground(Color.red);
+        b75.setVisible(false);
         JButton b76 = new JButton();
         JButton b77 = new JButton();
         JButton b78 = new JButton();
         JButton b79 = new JButton();
-        b79.setBackground(Color.red);
+        b79.setVisible(false);
         JButton b80 = new JButton();
         JButton b81 = new JButton();
         JButton b82 = new JButton();
         JButton b83 = new JButton();
-        b83.setBackground(Color.red);
+        b83.setVisible(false);
         JButton b84 = new JButton();
         JButton b85 = new JButton();
         JButton b86 = new JButton();
         JButton b87 = new JButton();
-        b87.setBackground(Color.red);
+        b87.setVisible(false);
         JButton b88 = new JButton();
-        b88.setBackground(Color.red);
+        b88.setVisible(false);
         JButton b89 = new JButton();
-        b89.setBackground(Color.red);
+        b89.setVisible(false);
         JButton b90 = new JButton();
-        b90.setBackground(Color.red);
+        b90.setVisible(false);
         JButton b91 = new JButton();
-        b91.setBackground(Color.red);
+        b91.setVisible(false);
         JButton b92 = new JButton();
         JButton b93 = new JButton();
         JButton b94 = new JButton();
         JButton b95 = new JButton();
-        b95.setBackground(Color.red);
+        b95.setVisible(false);
         JButton b96 = new JButton();
         JButton b97 = new JButton();
         JButton b98 = new JButton();
@@ -165,7 +168,7 @@ public class GameGUI
         JButton b105 = new JButton();
         JButton b106 = new JButton();
         JButton b107 = new JButton();
-        b107.setBackground(Color.red);
+        b107.setVisible(false);
         JButton b108 = new JButton();
         JButton b109 = new JButton();
         JButton b110 = new JButton();
@@ -178,7 +181,7 @@ public class GameGUI
         JButton b117 = new JButton();
         JButton b118 = new JButton();
         JButton b119 = new JButton();
-        b119.setBackground(Color.red);
+        b119.setVisible(false);
         JButton b120 = new JButton();
         JButton b121 = new JButton();
         JButton b122 = new JButton();
@@ -191,7 +194,7 @@ public class GameGUI
         JButton b129 = new JButton();
         JButton b130 = new JButton();
         JButton b131 = new JButton();
-        b131.setBackground(Color.red);
+        b131.setVisible(false);
         JButton b132 = new JButton();
         JButton b133 = new JButton();
         JButton b134 = new JButton();
@@ -204,9 +207,9 @@ public class GameGUI
         JButton b141 = new JButton();
         JButton b142 = new JButton();
         JButton b143 = new JButton();
-        b143.setBackground(Color.red);
+        b143.setVisible(false);
         JButton b144 = new JButton();
-        
+        //kkkkkkk
         //create the JFrame and set size
         JFrame fullFrame = new JFrame();
         fullFrame.setSize(WIDTH_ONE, HEIGHT);
@@ -294,6 +297,10 @@ public class GameGUI
         
         //weapon buttons
         ImageIcon eraser = new ImageIcon("eraser.jpg");
+        JButton eraserButton = new JButton(eraser); 
+        
+        JButton paperFBButton = new JButton("weap2");
+        JButton homeworkButton = new JButton("weap3");
         ImageIcon football = new ImageIcon("paperFootball.png");
         ImageIcon book = new ImageIcon("book.png");
         
