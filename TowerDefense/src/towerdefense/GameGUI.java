@@ -255,7 +255,7 @@ public class GameGUI
             gamePanel.add(buttons[i]);
         }
         
-        
+        //Enemy addition
         JButton enemy = new JButton();
         enemy.setBounds(100, 0, 20, 20);
         enemy.setBackground(Color.black);
