@@ -26,6 +26,7 @@ import javax.swing.*;
  */
 //comment
 //comment
+//john comment
 public class GameGUI 
 {
     public GameGUI()
