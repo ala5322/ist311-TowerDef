@@ -298,10 +298,6 @@ public class GameGUI
         
         //weapon buttons
         ImageIcon eraser = new ImageIcon("eraser.jpg");
-        JButton eraserButton = new JButton(eraser); 
-        
-        JButton paperFBButton = new JButton("weap2");
-        JButton homeworkButton = new JButton("weap3");
         ImageIcon football = new ImageIcon("paperFootball.png");
         ImageIcon book = new ImageIcon("book.png");
         
@@ -333,7 +329,7 @@ public class GameGUI
                 // primes the paper fb to be placed. Selects it? like witha borderaround it maybe
                 JFrame parent = new JFrame();
                 JOptionPane.showMessageDialog(parent, "selects paper fb i guess.");
-                FootballLauncher.createWeapon();
+                //FootballLauncher.createWeapon();
             }
         });
         
@@ -344,7 +340,7 @@ public class GameGUI
                 // primes the homework to be placed. Selects it? like witha borderaround it maybe
                 JFrame parent = new JFrame();
                 JOptionPane.showMessageDialog(parent, "selects homework i guess.");
-                HomeworkTosser.createWeapon();
+                //HomeworkTosser.createWeapon();
             }
         });
         

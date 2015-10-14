@@ -26,7 +26,7 @@ public class MainMenuGUI
 {
     public MainMenuGUI()
     {
-        
+        initComponents();
     }
     
     public void initComponents()
@@ -62,7 +62,6 @@ public class MainMenuGUI
                 {
                     //CALL GAME GUI
                     GameGUI theGameGUI = new GameGUI();
-                    theGameGUI.initComponents();
                     mainFrame.dispose();
                 }
             }
