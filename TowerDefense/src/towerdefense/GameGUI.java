@@ -321,7 +321,7 @@ public class GameGUI
                 EraserCannon.createWeapon();
             }
         });
-        
+        //
         paperFBButton.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e)
