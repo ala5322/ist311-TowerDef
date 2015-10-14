@@ -29,7 +29,7 @@ public class MainMenuGUI
         
     }
     
-    public void initComponents()
+    public static void initComponents()
     {
         JFrame mainFrame = new JFrame();
         Container contentPane = mainFrame.getContentPane();
@@ -45,7 +45,7 @@ public class MainMenuGUI
         
         JLabel nameLabel = new JLabel("Please enter your name, son");
         JLabel difficultyLabel = new JLabel("Please select difficulty");
-        JTextField nameTextBox = new JTextField("HughJaynus", 15);
+        JTextField nameTextBox = new JTextField("Hugh Jaynus", 15);
         startGameButton.setText("Start Game!");
         startGameButton.setSize(100, 20);
         
@@ -55,15 +55,13 @@ public class MainMenuGUI
             {
                 if (nameTextBox.getText().length() < 3 || nameTextBox.getText().length() > 10)
                 {
-                    JFrame parent = new JFrame();
-                    JOptionPane.showMessageDialog(parent, "Please enter a user name that is more than 3 or less than 10 characters!");
+                    //ERROR
                 }
                 else 
                 {
                     //CALL GAME GUI
                     GameGUI theGameGUI = new GameGUI();
                     theGameGUI.initComponents();
-                    mainFrame.dispose();
                 }
             }
         });
