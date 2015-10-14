@@ -16,11 +16,10 @@ public class TowerDefense
      */
     public static void main(String[] args) 
     {
-        // TODO code application logic here
+       // TODO code application logic here
        MainMenuGUI theMainGUI = new MainMenuGUI();
        theMainGUI.initComponents();
        GameGUI game = new GameGUI();
        game.initComponents();
     }
-    
 }
