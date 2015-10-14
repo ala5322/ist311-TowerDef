@@ -5,11 +5,13 @@
  */
 package towerdefense;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author ala5322
  */
-public class Enemy 
+public class Enemy
 {
     private int speed;
     private String color;
@@ -20,6 +22,8 @@ public class Enemy
     
     Enemy(int s, String c, int x, int y, int h)
     {
+        JButton enemy = new JButton();
+        enemy.setBounds(0, 100, 50, 50);
         speed = s;
         color = c;
         xValue = x;
