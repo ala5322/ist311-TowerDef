@@ -210,7 +210,7 @@ public class GameGUI
         JButton b143 = new JButton();
         b143.setVisible(false);
         JButton b144 = new JButton();
-        //kkkkkkk
+        
         //create the JFrame and set size
         JFrame fullFrame = new JFrame();
         fullFrame.setSize(WIDTH_ONE, HEIGHT);
