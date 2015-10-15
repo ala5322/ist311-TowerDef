@@ -429,8 +429,26 @@ public class GameGUI implements ActionListener
         Object obj = ae.getSource();
         if(obj == t1)
         {
-            x = x + 0;
-            y = y + 50;
+            if (y == 350)
+            {
+                if( x== 300)
+                {
+                    if (y == 150)
+                    {
+                        x = x + 50;
+                        y = y + 0;
+                    }
+                    x = x + 0;
+                    y = y - 50;
+                }
+                x = x + 50;
+                y = y + 0;
+            }
+            else
+            {
+                x = x + 0;
+                y = y + 50;
+            }
             enemy.setBounds(x, y, 20, 20);
         }
     }
