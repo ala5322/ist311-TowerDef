@@ -228,6 +228,7 @@ public class GameGUI
         backPanel.setPreferredSize(new Dimension(HEIGHT, HEIGHT));
         JPanel gamePanel = new JPanel(new FlowLayout());
         gamePanel.setPreferredSize(new Dimension(HEIGHT, HEIGHT));
+        gamePanel.setBounds(0, 0, HEIGHT, HEIGHT);
         JPanel controlPanel = new JPanel(new BorderLayout());
         controlPanel.setPreferredSize(new Dimension(WIDTH_TWO, HEIGHT));
         controlPanel.setBackground(Color.gray);
