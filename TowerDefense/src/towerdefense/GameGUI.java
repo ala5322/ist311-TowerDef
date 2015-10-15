@@ -19,6 +19,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
 
 /**
  *
@@ -39,6 +41,8 @@ public class GameGUI
         final int WIDTH_TWO = 300;
         final int HEIGHT = 600;
                 
+        
+        
         JButton b1 = new JButton();
         JButton b2 = new JButton();
         JButton b3 = new JButton();
@@ -315,6 +319,10 @@ public class GameGUI
         ImageIcon eraser = new ImageIcon("eraser.jpg");
         ImageIcon football = new ImageIcon("paperFootball.png");
         ImageIcon book = new ImageIcon("book.png");
+        Border thickBorder = new LineBorder(Color.BLUE, 3);
+        Border thinBorder = new LineBorder(Color.BLACK, 1);
+        
+        
         
         JButton eraserButton = new JButton(eraser);
         eraserButton.setPreferredSize(new Dimension(50, 50));
@@ -331,9 +339,15 @@ public class GameGUI
             public void actionPerformed(ActionEvent e)
             {
                 // primes the eraser to be placed. Selects it? like witha borderaround it maybe
-                JFrame parent = new JFrame();
-                JOptionPane.showMessageDialog(parent, "selects eraser i guess.");
+                //JFrame parent = new JFrame();
+                //JOptionPane.showMessageDialog(parent, "selects eraser i guess.");
                 EraserCannon.createWeapon();
+                
+                //sets border
+                homeworkButton.setBorder(thinBorder);
+                paperFBButton.setBorder(thinBorder);
+                eraserButton.setBorder(thickBorder);
+                String selectedButton = "eraser";
             }
         });
         //
@@ -342,9 +356,16 @@ public class GameGUI
             public void actionPerformed(ActionEvent e)
             {
                 // primes the paper fb to be placed. Selects it? like witha borderaround it maybe
-                JFrame parent = new JFrame();
-                JOptionPane.showMessageDialog(parent, "selects paper fb i guess.");
-                //FootballLauncher.createWeapon();
+                //JFrame parent = new JFrame();
+                //JOptionPane.showMessageDialog(parent, "selects paper fb i guess.");
+                FootballLauncher.createWeapon();
+                                
+                //sets border
+                eraserButton.setBorder(thinBorder);
+                homeworkButton.setBorder(thinBorder);
+                paperFBButton.setBorder(thickBorder);
+                
+                String selectedButton = "football";
             }
         });
         
@@ -353,9 +374,16 @@ public class GameGUI
             public void actionPerformed(ActionEvent e)
             {
                 // primes the homework to be placed. Selects it? like witha borderaround it maybe
-                JFrame parent = new JFrame();
-                JOptionPane.showMessageDialog(parent, "selects homework i guess.");
-                //HomeworkTosser.createWeapon();
+                //JFrame parent = new JFrame();
+                //JOptionPane.showMessageDialog(parent, "selects homework i guess.");
+                HomeworkTosser.createWeapon();
+                               
+                //sets border
+                paperFBButton.setBorder(thinBorder);
+                eraserButton.setBorder(thinBorder);
+                homeworkButton.setBorder(thickBorder);
+                
+                String selectedButton = "homework";
             }
         });
         
