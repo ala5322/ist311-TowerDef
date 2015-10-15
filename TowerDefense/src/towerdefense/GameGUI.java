@@ -38,6 +38,7 @@ public class GameGUI
         final int WIDTH_ONE = 900;
         final int WIDTH_TWO = 300;
         final int HEIGHT = 600;
+                
         JButton b1 = new JButton();
         JButton b2 = new JButton();
         JButton b3 = new JButton();
