@@ -221,9 +221,15 @@ public class GameGUI
         contentPane.setLayout(new BorderLayout());
         contentPane.setSize(WIDTH_ONE, HEIGHT);
         
+       
+        
         //create the control and game panels. Set size and color as well.
+        JPanel backPanel = new JPanel();
+        backPanel.setLayout(null);
+        backPanel.setPreferredSize(new Dimension(HEIGHT, HEIGHT));
         JPanel gamePanel = new JPanel(new FlowLayout());
         gamePanel.setPreferredSize(new Dimension(HEIGHT, HEIGHT));
+        gamePanel.setBounds(0, 0, HEIGHT, HEIGHT);
         JPanel controlPanel = new JPanel(new BorderLayout());
         controlPanel.setPreferredSize(new Dimension(WIDTH_TWO, HEIGHT));
         controlPanel.setBackground(Color.gray);
@@ -250,6 +256,14 @@ public class GameGUI
         {
             gamePanel.add(buttons[i]);
         }
+        
+        //Enemy addition
+        JButton enemy = new JButton();
+        enemy.setBounds(100, 0, 20, 20);
+        enemy.setBackground(Color.black);
+        backPanel.add(enemy);
+        
+        backPanel.add(gamePanel);
         
         //temp labels
         JTextField moneyField = new JTextField(10);
@@ -345,6 +359,8 @@ public class GameGUI
             }
         });
         
+        
+        
         JLabel eraserLabel1 = new JLabel("Eraser Cannon $20.");
         JLabel eraserLabel2 = new JLabel("Small Range Large Damage");
         JLabel eraserLabel3 = new JLabel("                                       ");
@@ -392,7 +408,7 @@ public class GameGUI
         controlPanel.add(botHalfPanel, BorderLayout.SOUTH);
         
         //add the game and control panels to the content pane     
-        contentPane.add(gamePanel, BorderLayout.WEST);
+        contentPane.add(backPanel, BorderLayout.WEST);
         contentPane.add(controlPanel,BorderLayout.EAST);
         
         fullFrame.pack();

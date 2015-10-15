@@ -9,6 +9,15 @@ package towerdefense;
  *
  * @author ala5322
  */
-public class FootballLauncher {
-    //ok
+public class FootballLauncher extends Weapon {
+    
+    public FootballLauncher(String n, int c, int r, int d) 
+    {
+        super(n, c, r, d);
+        
+    }
+    static void createWeapon()
+    {
+        
+    }
 }
