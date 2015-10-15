@@ -29,8 +29,14 @@ import javax.swing.border.LineBorder;
 //comment
 //comment
 //john comment
-public class GameGUI 
+public class GameGUI implements ActionListener
 {
+    Timer t1;
+    int x =125;
+    int y = 0;
+    
+    JButton enemy = new JButton();
+        
     public GameGUI()
     {
         initComponents();
@@ -261,17 +267,19 @@ public class GameGUI
             gamePanel.add(buttons[i]);
         }
         
+        t1 = new Timer(500, this);
+        t1.start();
+        
         //Enemy addition
-        JButton enemy = new JButton();
-        enemy.setBounds(100, 0, 20, 20);
+        enemy.setBounds(125, 0, 20, 20);
         enemy.setBackground(Color.black);
         backPanel.add(enemy);
         
         backPanel.add(gamePanel);
         
         //temp labels
-        JTextField moneyField = new JTextField(10);
-        JTextField scoreField = new JTextField(10);
+        JLabel moneyField = new JLabel("$30");
+        JLabel scoreField = new JLabel("0");
         //add the weapon options to the control panel
         //add score, money and etc to control panel
         JLabel moneyLabel = new JLabel("Money: ");
@@ -441,6 +449,18 @@ public class GameGUI
         
         fullFrame.pack();
         fullFrame.setVisible(true);
-        fullFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        fullFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+    }
+    
+    @Override
+    public void actionPerformed(ActionEvent ae) 
+    {
+        Object obj = ae.getSource();
+        if(obj == t1)
+        {
+            x = x + 0;
+            y = y + 50;
+            enemy.setBounds(x, y, 20, 20);
+        }
     }
 }
