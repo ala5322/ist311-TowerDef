@@ -35,12 +35,16 @@ public class GameGUI implements ActionListener
     int x =125;
     int y = 0;
     
+    String selectedButton = null;
     JButton enemy = new JButton();
         
+    
     public GameGUI()
     {
         initComponents();
     }
+    
+    
     public void initComponents()
     {
         final int WIDTH_ONE = 900;
@@ -323,14 +327,11 @@ public class GameGUI implements ActionListener
         healthPanel.setPreferredSize(new Dimension(300, 200));
         healthPanel.add(healthModule);
         
-        //weapon buttons
         ImageIcon eraser = new ImageIcon("eraser.jpg");
         ImageIcon football = new ImageIcon("paperFootball.png");
         ImageIcon book = new ImageIcon("book.png");
         Border thickBorder = new LineBorder(Color.BLUE, 3);
-        Border thinBorder = new LineBorder(Color.BLACK, 1);
-        
-        
+        Border thinBorder = new LineBorder(Color.BLACK, 1);        
         
         JButton eraserButton = new JButton(eraser);
         eraserButton.setPreferredSize(new Dimension(50, 50));
@@ -355,7 +356,8 @@ public class GameGUI implements ActionListener
                 homeworkButton.setBorder(thinBorder);
                 paperFBButton.setBorder(thinBorder);
                 eraserButton.setBorder(thickBorder);
-                String selectedButton = "eraser";
+                selectedButton = "eraser";
+                System.out.println(selectedButton);
             }
         });
         //
@@ -373,7 +375,8 @@ public class GameGUI implements ActionListener
                 homeworkButton.setBorder(thinBorder);
                 paperFBButton.setBorder(thickBorder);
                 
-                String selectedButton = "football";
+                selectedButton = "football";
+                System.out.println(selectedButton);
             }
         });
         
@@ -391,9 +394,12 @@ public class GameGUI implements ActionListener
                 eraserButton.setBorder(thinBorder);
                 homeworkButton.setBorder(thickBorder);
                 
-                String selectedButton = "homework";
+                selectedButton = "homework";
+                System.out.println(selectedButton);
+                
             }
         });
+        
         
         
         
